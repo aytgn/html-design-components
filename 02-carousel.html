@@ -47,8 +47,9 @@
         padding: 32px;
         padding-left: 86px;
         display: flex;
-        align-items: center;
+        /* align-items: center; */
         gap: 86px;
+        position: relative;
       }
       .testimonial-text {
         font-size: 18px;
@@ -66,6 +67,52 @@
         font-size: 12px;
         color: #e6fcf5;
       }
+      /* Controls */
+      .btn {
+        background-color: #fff;
+        border: none;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        border-radius: 50%;
+        top: 50%;
+        transform: translate(0, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn-left {
+        left: 0;
+        left: -20px;
+        top: 50%;
+      }
+      .btn-right {
+        right: 0;
+      }
+      .btn-icon {
+        height: 24px;
+        width: 24px;
+        stroke: #087f5b;
+      }
+      .dots {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 32px);
+        display: flex;
+        gap: 12px;
+        bottom: 0;
+      }
+      .dot {
+        height: 12px;
+        width: 12px;
+        background-color: #fff;
+        border: 2px solid #087f5b;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .dot-fill {
+        background-color: #087f5b;
+      }
     </style>
   </head>
   <body>
@@ -80,10 +127,10 @@
         <p class="testimonail-author">Maria de Almedia</p>
         <p class="testimonial-job"></p>
       </blockquote>
-      <button class="btn">
+      <button class="btn btn-left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
+          class="btn-icon"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -92,10 +139,10 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
       </button>
-      <button class="btn">
+      <button class="btn btn-right">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
+          class="btn-icon"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -104,6 +151,12 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
         </svg>
       </button>
+      <div class="dots">
+        <button class="dot dot-fill">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
     </div>
   </body>
 </html>
